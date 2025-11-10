@@ -1,0 +1,126 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply cursor-pointer rounded-2xl border-none bg-gradient-to-r from-orange to-orange-dark px-12 py-5 text-lg font-bold text-white transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-2 brightness-110;
+  }
+
+  .btn-secondary {
+    @apply inline-flex cursor-pointer items-center gap-2 rounded-xl border-none bg-dark-light px-5 py-3 font-semibold text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange/20 hover:text-white;
+  }
+
+  .btn-pagination {
+    @apply min-w-[45px] cursor-pointer rounded-xl border border-dark-light bg-dark-lighter px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300;
+  }
+
+  .btn-pagination:hover:not(:disabled) {
+    @apply -translate-y-0.5 border-orange bg-dark-light shadow-lg shadow-orange/30;
+  }
+
+  .btn-pagination:disabled {
+    @apply cursor-not-allowed opacity-30;
+  }
+
+  .btn-pagination-active {
+    @apply min-w-[45px] cursor-pointer rounded-xl border border-transparent bg-gradient-to-r from-orange to-orange-dark px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-orange/40 backdrop-blur-md transition-all duration-300;
+  }
+
+  .btn-clear {
+    @apply flex h-8 w-8 min-w-[2rem] flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-none bg-dark-light text-lg font-semibold text-zinc-400 transition-all duration-200;
+  }
+
+  .btn-clear:hover {
+    @apply scale-110 bg-orange/20 text-white;
+  }
+
+  .btn-trailer {
+    @apply block cursor-pointer rounded-2xl border-none bg-gradient-to-r from-orange to-orange-dark px-8 py-4 text-center text-base font-bold text-white no-underline shadow-lg shadow-orange/30 transition-all duration-300;
+  }
+
+  .btn-trailer:hover {
+    @apply -translate-y-1 shadow-xl shadow-orange/40 brightness-110;
+  }
+
+  .btn-close {
+    @apply cursor-pointer border-none bg-transparent px-2 py-1 text-xl font-bold text-orange-light transition-opacity duration-200;
+  }
+
+  .btn-close:hover {
+    @apply opacity-70;
+  }
+
+  .card {
+    @apply rounded-3xl border border-dark-light bg-dark-lighter/80 shadow-md shadow-black/20 backdrop-blur-md transition-all duration-300;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-dark-light/50 bg-dark-lighter/60 backdrop-blur-xl;
+  }
+}
+
+/* Custom animation keyframes and utility classes */
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.03) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
