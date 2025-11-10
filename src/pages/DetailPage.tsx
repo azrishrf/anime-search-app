@@ -28,8 +28,12 @@ function DetailPage() {
       once: false,
     });
 
-    if (id) {
+    // Validate that ID contains only digits
+    if (id && /^\d+$/.test(id)) {
       dispatch(fetchAnimeDetail(parseInt(id, 10)));
+    } else if (id) {
+      // Invalid ID format - set error message
+      dispatch(fetchAnimeDetail(-1));
     }
 
     return () => {
@@ -69,7 +73,7 @@ function DetailPage() {
 
   return (
     <div className="relative z-10 mx-auto max-w-[1400px] p-8">
-      <div className="mb-8" data-aos="fade-down">
+      <div className="mb-8">
         <button onClick={() => navigate("/")} className="btn-secondary !inline-flex !items-center gap-2">
           <IoMdArrowBack className="text-xl" />
           Back to Search

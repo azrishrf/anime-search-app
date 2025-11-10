@@ -47,6 +47,24 @@ export interface Anime {
   background: string | null;
 }
 
+export interface AnimeState {
+  searchResults: Anime[];
+  selectedAnime: Anime | null;
+  loading: boolean;
+  detailLoading: boolean;
+  error: string | null;
+  searchQuery: string;
+  currentPage: number;
+  totalPages: number;
+  hasNextPage: boolean;
+  favorites: Anime[];
+  filters: {
+    genres: string[];
+    year: string;
+  };
+  sortBy: "popularity" | "rating" | "newest" | null;
+}
+
 export interface SearchResponse {
   data: Anime[];
   pagination: {

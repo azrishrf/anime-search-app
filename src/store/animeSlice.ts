@@ -1,25 +1,7 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { cancelOngoingRequests, getAnimeById, searchAnime } from "../services/api";
-import type { Anime, SearchResponse } from "../types/anime";
-
-interface AnimeState {
-  searchResults: Anime[];
-  selectedAnime: Anime | null;
-  loading: boolean;
-  detailLoading: boolean;
-  error: string | null;
-  searchQuery: string;
-  currentPage: number;
-  totalPages: number;
-  hasNextPage: boolean;
-  favorites: Anime[];
-  filters: {
-    genres: string[];
-    year: string;
-  };
-  sortBy: "popularity" | "rating" | "newest" | null;
-}
+import type { Anime, AnimeState, SearchResponse } from "../types/anime";
 
 // Load favorites from localStorage
 const loadFavoritesFromStorage = (): Anime[] => {
