@@ -38,6 +38,12 @@ This document contains the AI prompts used during the development of the Anime S
 
 **Result:** Implemented FavoritesPage component with grid display, remove functionality and localStorage persistence. Connected to Redux and added navigation controls.
 
+## Pagination Fix
+
+**Prompt:** "Fix pagination buttons appearing after closing the search query. Pagination should only show when there's an active search, not when the search is cleared."
+
+**Result:** Updated the `renderPagination()` function to check if `searchQuery` is not empty before rendering pagination controls, preventing navigation buttons from blocking user interactions when search is cleared.
+
 ---
 
 **Note:** All prompts were crafted to build a production-ready application following React and TypeScript best practices.

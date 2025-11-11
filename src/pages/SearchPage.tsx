@@ -113,7 +113,7 @@ function SearchPage() {
 
   // Renders pagination controls for search results
   const renderPagination = () => {
-    if (!searchResults.length || totalPages <= 1) return null;
+    if (!searchResults.length || totalPages <= 1 || !searchQuery.trim()) return null;
 
     const pages = [];
     const maxVisible = 5;
