@@ -2,6 +2,8 @@
 
 A modern, feature-rich anime search application built with React, TypeScript, Redux, and Tailwind CSS. Search through thousands of anime titles with instant results, advanced filtering and a beautiful dark/orange themed UI.
 
+[Live Demo](https://anime-search-app-green.vercel.app/)
+
 ## 🚀 Features
 
 ### Core Features
