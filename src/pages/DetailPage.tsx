@@ -103,7 +103,7 @@ function DetailPage() {
 
         <div data-aos="fade-left">
           <div className="mb-4 flex items-start gap-4">
-            <h1 className="flex-1 text-5xl font-black leading-tight text-white">{selectedAnime.title}</h1>
+            <h1 className="flex-1 text-3xl md:text-5xl font-black leading-tight text-white">{selectedAnime.title}</h1>
           </div>
 
           {selectedAnime.title_english && selectedAnime.title_english !== selectedAnime.title && (

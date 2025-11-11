@@ -51,7 +51,7 @@ function ShareButton({ title, url }: ShareButtonProps) {
       {isOpen && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)}></div>
-          <div className="absolute top-full right-0 mt-2 bg-dark border-2 border-dark-light rounded-2xl shadow-2xl shadow-black/40 p-4 z-50 min-w-[250px]">
+          <div className="absolute top-full left-0 mt-2 bg-dark border-2 border-dark-light rounded-2xl shadow-2xl shadow-black/40 p-4 z-50 min-w-[250px]">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-white font-bold">Share on</h3>
               <button onClick={() => setIsOpen(false)} className="text-zinc-400 hover:text-white">
